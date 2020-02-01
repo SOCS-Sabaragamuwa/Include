@@ -20,4 +20,7 @@ Then the routs and time tables are also registered and given ID numbers. The veh
 
 And additional properties to officers can be entered. The additional details are first name, last name, password, email, mobile, designation.
 
-Additional features -Optimize routes to minimize travelling time -can add a feature to indicate weather the trash is seperately collected or not. -can add a penalty system to charge when trash is not properly seperated.
+Additional features 
+-Optimize routes to minimize travelling time 
+-can add a feature to indicate weather the trash is seperately collected or not. 
+-can add a penalty system to charge when trash is not properly seperated.
