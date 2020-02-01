@@ -24,3 +24,5 @@ Additional features
 -Optimize routes to minimize travelling time 
 -can add a feature to indicate weather the trash is seperately collected or not. 
 -can add a penalty system to charge when trash is not properly seperated.
+- show the location of the collector
+-if there is a breakdown of a collectors a system for others to attend
