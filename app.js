@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen(9090);
 
-//-- API Web Server Template----------------------------------------------------
 
 
 // issue#2
@@ -27,7 +26,6 @@ app.route('/api').get(function(req,res){
    res.writeHead(200,{'Content-Type' : 'application/json', 'Access-Control-Allow-Origin':'*'});
    res.end(JSON.stringify({'message':'Success', 'developerMessage':'Success'}));
 });
-
 
 //------------------------------------------------------------------------------
 //-- MySQL support functions ---------------------------------------------------
