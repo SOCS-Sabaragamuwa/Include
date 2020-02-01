@@ -17,9 +17,6 @@ NodeJs
 PhpMyadmin
 
 
-installing
-
-
 Features
 This was designed to make waste collection of a town area more efficient by introducing proper communication methods between customers and collectors.
 In this initially Users can be registered and enterd in to a data base
