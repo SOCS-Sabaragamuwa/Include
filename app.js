@@ -75,6 +75,40 @@ app.route('/api/users').post(function(req,res){
             return;
          }
       }
+      pw = password;
+      console.log("user given > " + pw);
+   }else{
+      pw = generator.generate({
+         length: 10,
+         numbers: true
+      });
+      console.log("System generated > " + pw);
+   }
+
+   var regNIC1 = new RegExp("^[0-9]{9}[V]$");
+   var regNIC2 = new RegExp("^[0-9]{12}$");
+
+   // NIC test
+   if(!(regNIC1.test(nic) || regNIC2.test(nic) )){
+      // invalid NIC
+      console.log("400: Invalid NIC:" + nic);
+      res.writeHead(400,{'Content-Type' : 'application/json', 'Access-Control-Allow-Origin':'*'});
+      res.end(JSON.stringify({'message':'Nic no is not set', 'developerMessage':'User creation failed because the nic no is not set' + nic }));
+      return;
+   }
+
+   var regMobile = new RegExp("^[\+][9][4][0-9]{9}$");
+
+   // Mobile Test mobile.length!=12 ||
+   if(!regMobile.test(mobile)){
+      // invalid mobile
+      console.log("400: Invalid mobile number :"+ mobile);
+      res.writeHead(400,{'Content-Type' : 'application/json', 'Access-Control-Allow-Origin':'*'});
+      res.end(JSON.stringify({'message':'Mobile no is not set', 'developerMessage':'User creation failed because the mobile no is not set'}));
+      return;
+   }
+
+   // Add a new user
 
    // is user already exists
    con.query("SELECT * FROM `app_users` WHERE `nic` LIKE '"+ nic + "'", function (err, result, fields) {
@@ -103,13 +137,10 @@ app.route('/api/users').post(function(req,res){
          res.writeHead(201,{'Content-Type' : 'application/json', 'Access-Control-Allow-Origin':'*'});
          res.end(JSON.stringify(respData));
          return;
-      }      
+      }
 
-   }else{
-     
-   }
+   });
 
-   // REM: hash the password
 
 });
 
@@ -125,9 +156,6 @@ function sql_newUser(userId, nic, mobile, password){
       return true;
    });
 }
-
-
-
 
 //------------------------------------------------------------------------------
 //-- MySQL support functions ---------------------------------------------------
