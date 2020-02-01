@@ -6,15 +6,19 @@ continue to increase year after year, the need for better and more efficient was
 communities, especially in the so called developing countries. To solve this dilemma, mobile technologies are considered for use in waste collection as a prospective means of improving waste management. 
 This application is an attempt to proffer a generic but yet concrete and efficient solution to theproblems associated with waste collection via the application of mobile technologies
 
+
 Technologies used
 MySql
 NodeJs
+
 
 Prerequisites
 NodeJs
 PhpMyadmin
 
+
 installing
+
 
 Features
 This was designed to make waste collection of a town area more efficient by introducing proper communication methods between customers and collectors.
@@ -28,7 +32,8 @@ The vehicle details, Offices details and route details will be entered in to the
 
 And additional properties to officers can be entered. The additional details are first name, last name, password, email, mobile, designation.
 
-Running the test
 
-
-contributing
+Additional features
+-Optimize routes to minimize travelling time
+-can add a feature to indicate weather the trash is seperately collected or not. 
+-can add a penalty system to charge when trash is not properly seperated.
