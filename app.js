@@ -615,7 +615,9 @@ app.route('/api/timetables').get(function(req,res){
                      'route_name': routeAr.route_name
                   }});
 
+                  console.log(resp1);
 
+                  return;
                });
             });
          });
@@ -623,10 +625,8 @@ app.route('/api/timetables').get(function(req,res){
       console.log("-------------");
       console.log(resp1);
       console.log("-------------");
-      console.log(resp1);
       res.writeHead(200,{'Content-Type' : 'application/json', 'Access-Control-Allow-Origin':'*'});
       res.end(JSON.stringify({'timetables': resp1}));
-      return;
    });
 });
 
