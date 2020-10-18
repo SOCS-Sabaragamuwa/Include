@@ -4,7 +4,7 @@ Waste management and collection system
 
 Getting Started One of the stages in waste management is waste collection, and as global waste generation continue to increase year after year, the need for better and more efficient waste disposal, collection and management methods become more evident and urgent. Automated forms of waste collection are very expensive and far from being affordable in many low income communities, especially in the so called developing countries. To solve this dilemma, mobile technologies are considered for use in waste collection as a prospective means of improving waste management. This application is an attempt to proffer a generic but yet concrete and efficient solution to theproblems associated with waste collection via the application of mobile technologies
 
-##Technologies used
+## Technologies used
 -MySql
 -NodeJs
 
